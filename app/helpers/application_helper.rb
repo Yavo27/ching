@@ -216,7 +216,6 @@ module ApplicationHelper
  end 
 
  def transformed_hex
-        puts @change_num
         if @change_num == 0
 	   hexagram hex_line_name
 	else
@@ -255,8 +254,9 @@ def tri_name tri
 
  def trigram
      odd_even = hex_line_name.collect { |x| x.split(" ").last}
-     @top_tri = odd_even[0..2]
-     @bott_tri = odd_even[3..5]
+     @bott_tri = odd_even[0..2]
+     @top_tri = odd_even[3..5]
+     return
  end
 
 end
