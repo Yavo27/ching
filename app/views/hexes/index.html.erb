@@ -10,35 +10,7 @@
   <tbody>
   <br>
 <b>Your Question was:</b> <%= Ask.last["question"] %><br>
-<!--
-=begin
 Your Iching reading will consist of 6 lines. Each line is create by flipping a coin 3 times. There are four possible results for each line "Pure Yin", "Pure Yang", "Changing Yin" or "Changing Yang". <br>
 The six lines will form a hexagram which can take on one of 64 different forms. Each of the 64 hexagrams has a unique name and meaning.<br>
 Here is your Iching hexagram:<br>
-<b>Your hexagram number is:</b> <%= Hex.find(hexagram hex_line_name)["hex_id"] %><br>
-<b>Hexagram Name:</b> <%= Hex.find(hexagram hex_line_name)["name"] %><br>
-<b>Hexagram Meaning:</b> <%= Hex.find(hexagram hex_line_name)["meaning"] %><br>
-<b>Hexagram Keywords:</b> <%= Hex.find(hexagram hex_line_name)["keywords"] %><br>
-<b>Hexagram Symbols:</b> <%= Hex.find(hexagram hex_line_name)["symbol"] %><br>
-<b>Top Trigram:</b> <%= Hex.find(hexagram hex_line_name)["top"] %><br>
-<b>Bottom Trigram</b> <%= Hex.find(hexagram hex_line_name)["bottom"] %><br>
-<b>Your Changing Line(s)</b> <%= if changing_lines[0].to_i >= 1 and changing_lines[0].to_i < 6 
-				    'Your Changed line is ';changing_lines[0]
-				  else
-				  changing_lines 
-				  end%><br>
-<b>Your Transformed hexagram number is:</b> <%= Hex.find(transformed_hex)["hex_id"] %><br>
-<b> Your Transformed Hex:</b> <%= Hex.find(transformed_hex)["name"] %><br>
-<%= trigram %><br>
-<b> Top Trigram:</b>
-<%= tri_name @top_tri %><br>
-<b> Bottom Trigram:</b>
-<%= tri_name @bott_tri %><br>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Ask the Iching Oracle another question.', 'asks/new' %>
-=end
--->
+<b>Your hexagram number is:</b> <%= Hex.find(hexagram hex_line_name) %><br>
