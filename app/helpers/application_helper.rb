@@ -187,12 +187,12 @@ module ApplicationHelper
 		  @one
 		when 2 
 		   if compare[0] == compare[1]
-		      compare[1]
+		     "#{ compare[1]}. If more than one than read the upper one"
 		   else
-		      "Changing Yin"
+		      "Changing Yin. If more than one than read the upper one" 
 		   end   
 		when 3
-		   compare[1]	
+		  "#{compare[1]}. If duplicates read the middle of the three changing lines."	
 		when 4
 		   #t_hex = hex.collect { |x| x[1] if x[0].include?("Changing") }
 		   p_hex = hex.collect { |x| x[1] if x[0].include?("Pure") }
