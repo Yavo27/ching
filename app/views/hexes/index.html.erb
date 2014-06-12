@@ -36,14 +36,14 @@ Here is your Iching hexagram:<br>
 				  else
 				  changing_lines
 				  end
-				  end%><br>
+				  end%><br><br><br><br><br><br>
 <b>(Second Hexagram)Your Transformed hexagram number is:</b> <%= Hex.find(transformed_hex)["hex_id"] %><br>
 <b>(Second Hexagram)Your Transformed Hex:</b> <%= Hex.find(transformed_hex)["name"] %><br>
-<%= trigram %><br>
-<b> Transformed Top Trigram:</b>
-<%= tri_name @top_tri %><br>
-<b> Transformed Bottom Trigram:</b>
-<%= tri_name @bott_tri %><br>
+<b>Hexagram Meaning:</b> <%= Hex.find(transformed_hex)["meaning"] %><br>
+<b>Hexagram Keywords:</b> <%= Hex.find(transformed_hex)["keywords"] %><br>
+<b>Hexagram Symbols:</b> <%= Hex.find(transformed_hex)["symbol"] %><br>
+<b>Top Trigram:</b> <%= Hex.find(transformed_hex)["top"] %><br>
+<b>Bottom Trigram</b> <%= Hex.find(transformed_hex)["bottom"] %><br>
   </tbody>
 </table>
 
