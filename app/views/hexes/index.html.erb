@@ -12,6 +12,14 @@
 <b>Your Question was:</b> <%= Ask.last["question"] %><br>
 Your Iching reading will consist of 6 lines. Each line is create by flipping a coin 3 times. There are four possible results for each line "Pure Yin", "Pure Yang", "Changing Yin" or "Changing Yang". <br>
 The six lines will form a hexagram which can take on one of 64 different forms. Each of the 64 hexagrams has a unique name and meaning.<br>
+<b>Here are the results of your Iching coin flip</b><br>
+Line 6 <%= @cast_lines[5][0] %> Line equals <%= @cast_lines[5][1] %><br>
+Line 5 <%= @cast_lines[4][0] %> Line equals <%= @cast_lines[4][1] %><br>
+Line 4 <%= @cast_lines[3][0] %> Line equals <%= @cast_lines[3][1] %><br>
+Line 3 <%= @cast_lines[2][0] %> Line equals <%= @cast_lines[2][1] %><br>
+Line 2 <%= @cast_lines[1][0] %> Line equals <%= @cast_lines[1][1] %><br>
+Line 1 <%= @cast_lines[0][0] %> Line equals <%= @cast_lines[0][1] %><br>
+
 Here is your Iching hexagram:<br>
 <b>Your hexagram number is:</b> <%= Hex.find(hexagram hex_line_name)["hex_id"] %><br>
 <b>Hexagram Name:</b> <%= Hex.find(hexagram hex_line_name)["name"] %><br>
@@ -20,10 +28,14 @@ Here is your Iching hexagram:<br>
 <b>Hexagram Symbols:</b> <%= Hex.find(hexagram hex_line_name)["symbol"] %><br>
 <b>Top Trigram:</b> <%= Hex.find(hexagram hex_line_name)["top"] %><br>
 <b>Bottom Trigram</b> <%= Hex.find(hexagram hex_line_name)["bottom"] %><br>
-<b>Your Changing Line(s)</b> <%= if changing_lines[0].to_i >= 1 and changing_lines[0].to_i < 6 
-				    'Your Changed line is ';changing_lines[0]
+<b>Your Changed Line</b> <%= if changing_lines[0].to_i >= 1 and changing_lines[0].to_i < 6 
+				    'Your Changed line is ';changing_lines[0].to_i + 1
 				  else
-				  changing_lines 
+				  if changing_lines == [0]
+				     changing_lines[0]
+				  else
+				  changing_lines
+				  end
 				  end%><br>
 <b>Your Transformed hexagram number is:</b> <%= Hex.find(transformed_hex)["hex_id"] %><br>
 <b> Your Transformed Hex:</b> <%= Hex.find(transformed_hex)["name"] %><br>
