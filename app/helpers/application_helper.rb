@@ -194,11 +194,11 @@ module ApplicationHelper
 		when 3
 		   compare[1]	
 		when 4
-		   t_hex = hex.collect { |x| x[1] if x[0].include?("Changing") }
+		   #t_hex = hex.collect { |x| x[1] if x[0].include?("Changing") }
 		   p_hex = hex.collect { |x| x[1] if x[0].include?("Pure") }
-		   t_hex.delete(nil)
+		   #t_hex.delete(nil)
 		   p_hex.delete(nil)
-		   return p_hex.max
+		   return p_hex.max + 1
 		when 5
 		   p_hex = hex.collect { |x| x[1] if x[0].include?("Pure") }
 		   p_hex.delete(nil)
