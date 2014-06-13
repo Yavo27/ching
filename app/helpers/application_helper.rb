@@ -2,13 +2,14 @@ module ApplicationHelper
   
  def coin_toss
     toss = {"Yin" => 2, "Yang" => 3}
-    Hash[toss.to_a.sample(1)]
+    @coin = 3.times.collect { Hash[toss.to_a.sample(1)] }
  end
 
  def yin_yang
-     line = 3.times.collect {coin_toss}
-     yy = 3.times.collect {coin_toss.values[0]}
-     yy_value = yy.inject(0, &:+)
+     coin_toss
+     line = @coin
+     yy = (0..2).to_a.collect { |x| @coin[x].values}
+     yy_value = yy.flatten.inject(:+)
      case yy_value
 	when 6
            ty = "Changing Yin"
