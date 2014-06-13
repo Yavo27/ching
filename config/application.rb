@@ -1,11 +1,10 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-
+require 'rails_12factor'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-config.serve_static_assets = true
 module Ching
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
