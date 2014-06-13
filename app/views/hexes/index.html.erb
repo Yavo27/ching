@@ -12,7 +12,7 @@
 <b>Your Question was:</b> <%= Ask.last["question"] %><br>
 Your Iching reading will consist of 6 lines. Each line is create by flipping a Yin/Yang coin(one side on the coin is Yin and the other side Yang) 3 times. There are four possible results for each line "Pure Yin", "Pure Yang", "Changing Yin" or "Changing Yang". <br>
 The six lines will form a hexagram which can take on one of 64 different forms. Each of the 64 hexagrams has a unique name and meaning.<br><br>
-<b>Here are the results of your Iching coin flip</b><br>
+<b>Here are the results of your Iching coin flip:</b><br>
 Line 6 coins are <%= a = (0..2).to_a.collect { |x| @cast_lines[5][0][x].keys[0] } * ", "  %>. Line equals <%= @cast_lines[5][1] %>.<br>
 Line 5 coins are <%= a = (0..2).to_a.collect { |x| @cast_lines[4][0][x].keys[0] } * ", "  %>. Line equals <%= @cast_lines[4][1] %>.<br>
 Line 4 coins are <%= a = (0..2).to_a.collect { |x| @cast_lines[3][0][x].keys[0] } * ", "  %>. Line equals <%= @cast_lines[3][1] %>.<br>
@@ -27,8 +27,8 @@ Here is your Iching hexagram:<br>
 <b>Hexagram Keywords:</b> <%= Hex.find(hexagram hex_line_name)["keywords"] %><br>
 <b>Hexagram Symbols:</b> <%= Hex.find(hexagram hex_line_name)["symbol"] %><br>
 <b>Top Trigram:</b> <%= Hex.find(hexagram hex_line_name)["top"] %><br>
-<b>Bottom Trigram</b> <%= Hex.find(hexagram hex_line_name)["bottom"] %><br>
-<b>Your Changed Line</b> <%= if changing_lines[0].to_i >= 1 and changing_lines[0].to_i < 6 
+<b>Bottom Trigram:</b> <%= Hex.find(hexagram hex_line_name)["bottom"] %><br>
+<b>Your Changed Line:</b> <%= if changing_lines[0].to_i >= 1 and changing_lines[0].to_i < 6 
 				    'Your Changed line is ';changing_lines[0].to_i + 1
 				  else
 				  if changing_lines == [0]
@@ -43,7 +43,7 @@ Here is your Iching hexagram:<br>
 <b>Hexagram Keywords:</b> <%= Hex.find(transformed_hex)["keywords"] %><br>
 <b>Hexagram Symbols:</b> <%= Hex.find(transformed_hex)["symbol"] %><br>
 <b>Top Trigram:</b> <%= Hex.find(transformed_hex)["top"] %><br>
-<b>Bottom Trigram</b> <%= Hex.find(transformed_hex)["bottom"] %><br>
+<b>Bottom Trigram:</b> <%= Hex.find(transformed_hex)["bottom"] %><br>
   </tbody>
 </table>
 
