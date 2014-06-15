@@ -69,7 +69,7 @@ class HexesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hex_params
-      params[:hex].permit(:hex_id, :name, :meaning, :keywords, :symbol, :top, :bott) 
+      params[:hex].permit(:hex_id) 
       params[:ask].permit(:question)
     end
 end

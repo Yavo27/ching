@@ -24,7 +24,8 @@ class AsksController < ApplicationController
   # POST /asks
   # POST /asks.json
   def create
-    @hex = 'hexes/index'
+   # @hex = 'hexes/index'
+    
     @ask = Ask.new(ask_params)
 
     respond_to do |format|
@@ -69,6 +70,6 @@ class AsksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ask_params
-      params.require(:ask).permit(:question)
+      params.require(:ask).permit(:question, :line1, :line2, :line3, :line4, :line5, :line6)
     end
 end

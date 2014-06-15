@@ -259,5 +259,11 @@ def tri_name tri
      @top_tri = odd_even[3..5]
      return
  end
+ def add_lines
+     lines
+     a = Ask.last
+     a.update_attributes(:line6 =>(0..2).to_a.collect { |x| @cast_lines[5][0][x]}, :line5 => (0..2).to_a.collect { |x| @cast_lines[4][0][x]}, :line4 => (0..2).to_a.collect { |x| @cast_lines[3][0][x]}, :line3 => (0..2).to_a.collect { |x| @cast_lines[2][0][x]}, :line2 => (0..2).to_a.collect { |x| @cast_lines[1][0][x]}, :line1 => (0..2).to_a.collect { |x| @cast_lines[0][0][x]}) 
+
+end
 
 end
