@@ -31,7 +31,8 @@ class AsksController < ApplicationController
       if @ask.save
         format.html { redirect_to :controller => :hexes, :action => 'index' }
       else
-        format.html { render @hex }
+        format.html { render :new }
+        format.json { render json: @hex.errors, status: :unprocessable_entity }
       end
     end
   end
