@@ -8,7 +8,7 @@
 
   <tbody>
   <br>
-<b>Your Question was:</b> <%= Ask.last["question"] %><br><br><br>
+<b>Your Question was:</b> <%= Ask.last.question %><br><br><br>
 Your Iching reading will consist of 6 lines. Each line is create by flipping a Yin/Yang coin(one side on the coin is Yin and the other side Yang) 3 times. There are four possible results for each line "Pure Yin", "Pure Yang", "Changing Yin" or "Changing Yang". <br>
 The six lines will form a hexagram which can take on one of 64 different forms. Each of the 64 hexagrams has a unique name and meaning.<br><br>
 <b>Here are the results of your Iching coin flip:</b><br>
@@ -20,13 +20,13 @@ Line 2 coins are <%= a = (0..2).to_a.collect { |x| @cast_lines[1][0][x].keys[0] 
 Line 1 coins are <%= a = (0..2).to_a.collect { |x| @cast_lines[0][0][x].keys[0] } * ", "  %>. Line equals <%= @cast_lines[0][1] %>.<br><br>
 
 Here is your Iching hexagram:<br>
-<b>(First Hexagram)Your hexagram number is:</b> <%= Hex.find(hexagram hex_line_name)["hex_id"] %><br>
-<b>(First Hexagram)Hexagram Name:</b> <%= Hex.find(hexagram hex_line_name)["name"] %><br>
-<b>Hexagram Meaning:</b> <%= Hex.find(hexagram hex_line_name)["meaning"] %><br><br>
-<b>Hexagram Keywords:</b> <%= Hex.find(hexagram hex_line_name)["keywords"] %><br>
-<b>Hexagram Symbols:</b> <%= Hex.find(hexagram hex_line_name)["symbol"] %><br>
-<b>Top Trigram:</b> <%= Hex.find(hexagram hex_line_name)["top"] %><br>
-<b>Bottom Trigram:</b> <%= Hex.find(hexagram hex_line_name)["bottom"] %><br>
+<b>(First Hexagram)Your hexagram number is:</b> <%= Hex.find(hexagram hex_line_name).hex_id %><br>
+<b>(First Hexagram)Hexagram Name:</b> <%= Hex.find(hexagram hex_line_name).name %><br>
+<b>Hexagram Meaning:</b> <%= Hex.find(hexagram hex_line_name).meaning %><br><br>
+<b>Hexagram Keywords:</b> <%= Hex.find(hexagram hex_line_name).keywords %><br>
+<b>Hexagram Symbols:</b> <%= Hex.find(hexagram hex_line_name).symbol %><br>
+<b>Top Trigram:</b> <%= Hex.find(hexagram hex_line_name).top %><br>
+<b>Bottom Trigram:</b> <%= Hex.find(hexagram hex_line_name).bottom %><br>
 <b>Your Changed Line:</b> <%= if changing_lines[0].to_i >= 1 and changing_lines[0].to_i < 6 
 				    'Your Changed line is ';changing_lines[0].to_i + 1
 				  else
@@ -36,13 +36,13 @@ Here is your Iching hexagram:<br>
 				     changing_lines
 				  end
 				  end%><br><br><br><br>
-<b>(Second Hexagram)Your Transformed hexagram number is:</b> <%= Hex.find(transformed_hex)["hex_id"] %><br>
-<b>(Second Hexagram)Your Transformed Hex:</b> <%= Hex.find(transformed_hex)["name"] %><br>
-<b>Hexagram Meaning:</b> <%= Hex.find(transformed_hex)["meaning"] %><br>
-<b>Hexagram Keywords:</b> <%= Hex.find(transformed_hex)["keywords"] %><br>
-<b>Hexagram Symbols:</b> <%= Hex.find(transformed_hex)["symbol"] %><br>
-<b>Top Trigram:</b> <%= Hex.find(transformed_hex)["top"] %><br>
-<b>Bottom Trigram:</b> <%= Hex.find(transformed_hex)["bottom"] %><br>
+<b>(Second Hexagram)Your hexagram number is:</b> <%= Hex.find(hexagram hex_line_name).hex_id %><br>
+<b>(Second Hexagram)Hexagram Name:</b> <%= Hex.find(hexagram hex_line_name).name %><br>
+<b>Hexagram Meaning:</b> <%= Hex.find(hexagram hex_line_name).meaning %><br><br>
+<b>Hexagram Keywords:</b> <%= Hex.find(hexagram hex_line_name).keywords %><br>
+<b>Hexagram Symbols:</b> <%= Hex.find(hexagram hex_line_name).symbol %><br>
+<b>Top Trigram:</b> <%= Hex.find(hexagram hex_line_name).top %><br>
+<b>Bottom Trigram:</b> <%= Hex.find(hexagram hex_line_name).bottom %><br>
   </tbody>
 </table>
 
