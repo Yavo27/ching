@@ -26,7 +26,6 @@ module ApplicationHelper
  def lines
      @cast_lines = 6.times.collect {yin_yang}
      @cast_lines.freeze
-     return
  end
  
  def hex_line_name  
@@ -263,7 +262,6 @@ def tri_name tri
      lines
      a = Ask.last
      a.update_attributes(:line6 =>(0..2).to_a.collect { |x| @cast_lines[5][0][x]}, :line5 => (0..2).to_a.collect { |x| @cast_lines[4][0][x]}, :line4 => (0..2).to_a.collect { |x| @cast_lines[3][0][x]}, :line3 => (0..2).to_a.collect { |x| @cast_lines[2][0][x]}, :line2 => (0..2).to_a.collect { |x| @cast_lines[1][0][x]}, :line1 => (0..2).to_a.collect { |x| @cast_lines[0][0][x]}) 
-
 end
 
 end

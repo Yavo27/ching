@@ -1,4 +1,5 @@
 class Ask < ActiveRecord::Base
+has_one :hex
 validates_presence_of :question
 serialize :line1, Array
 serialize :line2, Array
