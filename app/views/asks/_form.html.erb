@@ -12,12 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :question %><br>
-    <%= f.text_area :question %><br>
-    <%= label_tag "Place of Birth" %><br>
-    <%= text_area_tag 'Place of Birth' %>
+    <%= f.label "Please write your question in the box below." %><br>
+    <%= f.text_area(:question, :cols => 50, :rows => 10) %><br>
   </div>
   <div class="actions">
-    <%= f.submit("Click Here To Get Your Iching Reading") %>
+   <div id="wrapper"> <%= f.submit("Click Here To Get Your Iching Reading") %></div>
+    <style>#wrapper input {font-size:20px; background: #000000; color: #b29600}</style><br><br><br><br><br><br><br><br>
   </div>
 <% end %>
