@@ -13,7 +13,9 @@
 
   <div class="field">
     <%= f.label :question %><br>
-    <%= f.text_area :question %>
+    <%= f.text_area :question %><br>
+    <%= label_tag "Place of Birth" %><br>
+    <%= text_area_tag 'Place of Birth' %>
   </div>
   <div class="actions">
     <%= f.submit("Click Here To Get Your Iching Reading") %>

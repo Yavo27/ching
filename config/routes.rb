@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :asks
+  resources :asks 
 
   resources :hexes
 

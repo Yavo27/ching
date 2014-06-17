@@ -37,13 +37,13 @@ Here is your Iching hexagram:<br>
 				     changing_lines
 				  end
 				  end%><br><br><br><br>
-<b>(Second Hexagram)Your hexagram number is:</b> <%= Hex.find(hexagram hex_line_name).hex_id %><br>
-<b>(Second Hexagram)Hexagram Name:</b> <%= Hex.find(hexagram hex_line_name).name %><br>
+<b>(Second Hexagram)Your hexagram number is:</b> <%= Hex.find(transformed_hex).hex_id %><br>
+<b>(Second Hexagram)Hexagram Name:</b> <%= Hex.find(transformed_hex).name %><br>
 <b>Hexagram Meaning:</b> <%= Hex.find(hexagram hex_line_name).meaning %><br><br>
-<b>Hexagram Keywords:</b> <%= Hex.find(hexagram hex_line_name).keywords %><br>
-<b>Hexagram Symbols:</b> <%= Hex.find(hexagram hex_line_name).symbol %><br>
-<b>Top Trigram:</b> <%= Hex.find(hexagram hex_line_name).top %><br>
-<b>Bottom Trigram:</b> <%= Hex.find(hexagram hex_line_name).bottom %><br>
+<b>Hexagram Keywords:</b> <%= Hex.find(transformed_hex).keywords %><br>
+<b>Hexagram Symbols:</b> <%= Hex.find(transformed_hex).symbol %><br>
+<b>Top Trigram:</b> <%= Hex.find(transformed_hex).top %><br>
+<b>Bottom Trigram:</b> <%= Hex.find(transformed_hex).bottom %><br>
   </tbody>
 </table>
 
