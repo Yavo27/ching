@@ -33,7 +33,6 @@ class AsksController < ApplicationController
         format.html { redirect_to :controller => :hexes, :action => 'index' }
       else
         format.html { render :new }
-	format.js { render 'fail_create.js.erb' }
       end
     end
   end
